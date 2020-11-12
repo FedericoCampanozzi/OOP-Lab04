@@ -21,8 +21,8 @@ public final class TestBank2 {
         /*
          *  TODO assign actual instances of the realized classes
          */
-        final BankAccount acc1 = null;
-        final BankAccount acc2 = null;
+        final BankAccount acc1 = new ClassicBankAccount(usr1.getUserID(), 0);
+        final BankAccount acc2 = new RestrictedBankAccount(usr2.getUserID(), 0);
         final var balance1 = usr1.getName() + " " + usr1.getSurname() + " account balance";
         final var balance2 = usr2.getName() + " " + usr2.getSurname() + " account balance";
         checkEquality(balance1, 0d, acc1.getBalance());
